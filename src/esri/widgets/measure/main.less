@@ -1,0 +1,93 @@
+.sadie-measure-panel {
+    position: relative;
+    width: 316px;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px #6e6e6e;
+    border-radius: 5px 5px 0 0;
+
+    .panel-header {
+        width: 100%;
+        height: 42px;
+        background-color: #409eff;
+        border-radius: 5px 5px 0 0;
+        cursor: move;
+
+        .el-icon-close {
+            cursor: pointer;
+        }
+
+        span {
+            height: 40px;
+            line-height: 40px;
+            margin-left: 10px;
+        }
+
+        i {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+    }
+
+    .panel-main {
+        padding: 10px 20px;
+
+        .action-button {
+            font-size: 22px;
+            background-color: #d3d3d3;
+            border: 1px solid #d3d3d3;
+            color: #6e6e6e;
+            height: 42px;
+            width: 44px;
+            text-align: center;
+        }
+
+        .action-button:hover {
+            background: #0079c1;
+            color: #e4e4e4;
+        }
+
+        .active {
+            background: #0079c1;
+            color: #e4e4e4;
+        }
+
+        .unit-select {
+            width: 72px;
+            height: 32px;
+            background-color: #f7f6f6;
+            border-color: #f7f6f6;
+            font-weight: bold;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            + .toolbar {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.sadie-measure-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    .sadie-measure-toolbar {
+        display: flex;
+        justify-content: center;
+
+        .editing-bar,
+        .drawing-bar {
+            margin: 10px;
+            pointer-events: all;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.sadie-interact-view {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+
+    .interact-toolbar {
+        pointer-events: all;
+        width: 60px;
+        height: 100%;
+        background: #389bea;
+        color: #eee;
+        flex: none;
+        z-index: 9;
+
+        .toolbar-item {
+            height: 60px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 10px;
+            box-sizing: border-box;
+            user-select: none;
+            font-size: 9px;
+
+            &:hover {
+                background: #006ebf;
+            }
+
+            &.active {
+                background: #006ebf;
+
+                // i {
+                //     color: #1296db;
+                // }
+            }
+
+            i {
+                font-size: 24px;
+                display: block;
+                margin: 0 auto 4px;
+            }
+        }
+    }
+
+    .interact-panel {
+        pointer-events: all;
+        min-width: 300px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        border-right: 1px solid #cac8c3;
+        flex: none;
+
+        .title {
+            height: 50px;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 16px;
+            background: #bbddfa;
+            line-height: 50px;
+            padding: 0 20px;
+            box-shadow: 0px 1px 2px rgba(153, 153, 153, 0.4);
+
+            i {
+                line-height: inherit;
+                float: right;
+
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+
+        .body {
+            background: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12),
+                0 0 6px 0 rgba(0, 0, 0, 0.04);
+            color: #333;
+        }
+    }
+
+    .interact-result {
+        flex: auto;
+        width: 600px;
+
+        background: #eceff1;
+        pointer-events: all;
+
+        .title {
+            height: 50px;
+            color: #333;
+            margin-bottom: 5px;
+            font-size: 15px;
+            background: #bbddfa;
+            line-height: 50px;
+            padding: 0 20px;
+
+            .el-icon-close {
+                line-height: inherit;
+                float: right;
+
+                cursor: pointer;
+                opacity: 0.8;
+                font-size: 24px;
+            }
+
+            .el-icon-document {
+                line-height: inherit;
+                color: #519ddc;
+                font-size: 24px;
+                margin-right: 6px;
+            }
+        }
+    }
+    .interact-panel {
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: relative;
+        height: 100%;
+
+        .panel-close {
+            position: absolute;
+            top: 50%;
+            height: 80px;
+            margin-top: -40px;
+            right: -14px;
+            // z-index: 9;
+            width: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .icon-close {
+            background-image: url(../images/close.png);
+        }
+
+        .icon-open {
+            background-image: url(../images/open.png);
+        }
+    }
+}
